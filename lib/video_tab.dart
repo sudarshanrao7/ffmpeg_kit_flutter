@@ -63,7 +63,7 @@ class VideoTab implements PlayerTab {
   }
 
   Future<File> getHlsOutputFile() async {
-    Directory documentsDirectory = await VideoUtil.tempDirectory;
+    Directory documentsDirectory = await VideoUtil.documentsDirectory;
     return new File("${documentsDirectory.path}/output.m3u8");
   }
 
